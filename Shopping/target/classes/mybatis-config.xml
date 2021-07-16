@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- DB 테이블과 컬럼들을 mapper 매핑을 위한 변수 선언-->
+	<properties>
+		<!-- 
+		* property
+		- name : mapper.xml에서 사용될 이름
+		- value : DB 테이블 및 컬럼 이름
+		 -->
+		<property name="customer" value="customer"/>
+		 <property name="customerId" value="customer_id"/>
+		 <property name="customerPw" value="customer_pw"/>
+		 <property name="customerName" value="customer_name"/>
+		 <property name="customerPhone" value="customer_phone"/>
+		 
+		 <property name="product" value="product"/>
+		 <property name="productNo" value="product_no"/>
+		 <property name="productName" value="product_name"/>
+		 <property name="productPrice" value="product_price"/>
+		 <property name="productSeller" value="product_seller"/>
+		 <property name="productCourier" value="product_courier"/>
+		 <property name="productImage" value="product_image"/>
+		 <property name="reviewRating" value="review_rating"/>
+		 <property name="salesRate" value="sales_rate"/>
+<!-- 		 <property name="categoryCode" value="category_code"/> -->
+		 
+		 <property name="review" value="review"/>
+		 <property name="reviewNo" value="review_no"/>
+		 <property name="reviewContent" value="review_content"/>
+		 <property name="reviewDate" value="review_date"/>
+		 <property name="reviewLike" value="review_like"/>
+		 <property name="reviewUnlike" value="review_unlike"/>		 
+		 <property name="reviewRating" value="review_rating"/>		 
+		 <property name="productNo" value="product_no"/>
+		 <property name="customerId" value="customer_id"/>
+		 
+		 <property name="category" value="category"/>		
+		 <property name="categoryCode" value="category_code"/>		 
+		 <property name="categoryNo" value="category_no"/>			 		 
+			
+		 
+		 <property name="cart" value="cart"/>	 		 
+		 <property name="cartNo" value="cart_no"/>	 		 
+		 <property name="customerId" value="customer_id"/>	 		 
+		 <property name="cartImage" value="cart_image"/>	 		 
+		 <property name="cartName" value="cart_name"/>	 		  		 
+		 <property name="cartPrice" value="cart_price"/>	 		 
+		 <property name="cartAmount" value="cart_amount"/>	 		 
+		 <property name="cartTotalprice" value="cart_totalprice"/>	 		 
+		 <property name="productNo" value="product_no"/>	 		 
+		 <property name="category" value="category"/>	 		 
+	
+		 <property name="address" value="address"/>		 
+		 <!-- <property name="customerId" value="customer_id"/> -->
+		 <property name="addressNo" value="address_no"/>
+		 <property name="addressName" value="address_name"/>
+		 <property name="addressDestination" value="address_destination"/>
+		 <property name="addressDetail" value="address_detail"/>
+		 <property name="addressPhone" value="address_phone"/>
+		 <property name="addressRequest" value="address_request"/>
+	
+		 <property name="buy" value="buy"/>		 
+		 <property name="buyNo" value="buy_no"/>		 
+		 <property name="buyId" value="buy_id"/>		 
+		 <property name="buyProducts" value="buy_products"/>		 
+		 <property name="buyDate" value="buy_date"/>		 
+		 <property name="buyDelDate" value="buy_deldate"/>		 
+		 <property name="buyDelCheck" value="buy_delCheck"/>		 
+		 <property name="buyAmount" value="buy_amount"/>		 
+		 <property name="buyTotalPrice" value="buy_totalprice"/>		 
+		 <property name="buyImage" value="buy_image"/>		 
+		 <!-- <property name="addressNo" value="address_no"/> -->
+		 <!-- <property name="customerId" value="customer_id"/> -->
+	
+	</properties>
+	
+	<!-- Underscore 명명법을 Camel 명명법으로 매핑 -->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<!--  
+	typeAliases : mapper.xml의 select 리턴 타입에 들어갈 클래스 경로를 설정
+	 -->
+	 <typeAliases>
+	 	<package name="mall.spring.project.domain"/>
+	 </typeAliases>
+
+</configuration>

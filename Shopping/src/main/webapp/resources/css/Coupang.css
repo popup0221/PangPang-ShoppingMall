@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.top-bar {
+  position: absolute;
+  height: 35px;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #F0F0F0;
+  z-index: 3;
+}
+
+.top-bar>section {
+  width: 1020px;
+}
+
+.top-bar>section {
+  width: 980px;
+  margin: 0 auto;
+  font-size: 11px;
+}
+
+#headerMenu {
+  float: right;
+  position: relative;
+}
+
+#headerMenu {
+  z-index: 10;
+}
+#container.home {
+    min-width: 1020px;
+    background-color: #fff;
+}
+#container {
+    position: relative;
+    min-width: 980px;
+    overflow: hidden;
+}
+.home {
+    border: none;
+}
+body, div, dl, dt, dd, ul, ol, menu, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p {
+    margin: 0;
+    padding: 0;
+}
+div {
+    display: block;
+}
+.renewal-header {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.home .renewal-header #header {
+    width: 1020px;
+}
+.renewal-header #header {
+    position: relative;
+    width: 980px;
+    height: 115px;
+    margin: 0 auto;
+    padding-top: 32px;
+    background: #fff;
+}
+#header {
+    z-index: 3;
+}
+#header, #gnb, #contents, #footer {
+    position: relative;
+}
+.home .renewal-header #header section {
+    width: 880px;
+}
+.renewal-header #header section {
+    position: absolute;
+    width: 840px;
+    height: 91px;
+    margin: 25px 0 0 140px;
+}
+
+.search_bar{
+   width: 300px;
+}

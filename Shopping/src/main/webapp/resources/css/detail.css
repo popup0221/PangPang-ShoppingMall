@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+.image{
+    float: left;
+    width: 410px;
+    height: 410px;
+}
+img{
+  vertical-align: top;
+}
+.prod-buy{
+    position: relative;
+    float: right;
+    width: 479px;
+    font-size: 12px
+}
+.prod-image {
+    position: relative;
+    float: left;
+    width: 490px;
+    text-align: center;
+}
+.center{
+    width: 1020px;
+    margin: 0 auto 20px;
+}
+.productAmount {
+    vertical-align: top;
+    text-align: center;
+    border: 0;
+    width: 61px;
+    height: 40px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    color: #111;
+    line-height: 25px;
+    padding: 11px 0 9px 0;
+}
+.prod-buy-quantity-and-footer {
+    position: relative;
+    margin-top: 16px;
+}
+.prod-buy-quantity {
+    position: relative;
+    clear: both;
+    display: inline-block;
+    width: 80px;
+}
+.prod-buy-quantity .prod-buy__quantity {
+    display: table;
+    width: 100%;
+}
+.prod-buy-quantity .prod-quantity__form {
+    display: table;
+    width: auto;
+    border: 1px solid #ccc;
+}
+element.style {
+    display: table-cell;
+    vertical-align: top;
+}
+body, div, dl, dt, dd, ul, ol, menu, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p {
+    margin: 0;
+    padding: 0;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.prod-buy-quantity button:first-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.prod-buy-quantity button {
+    background: transparent;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    display: block;
+    border: 0 none;
+    line-height: 0;
+}
+button {
+    border-radius: 0;
+}
+button, [role="button"] {
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+body, input, textarea, select, button, table {
+    font-family: 돋움, Dotum, sans-serif;
+    font-size: 100%;
+}
+
+button {
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.prod-buy-footer {
+    *zoom: 1;
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    float: right;
+}
+.prod-buy-footer .btn_cart {
+    margin-right: 7px;
+    color: #346AFF;
+}
+.prod-buy-footer .btn_buy {
+    background: #346aff;
+    color: #fff;
+}
+.prod-buy-footer button {
+    display: block;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    line-height: 40px;
+    width: 191px;
+    height: 42px;
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid #346aff;
+}
+/* 리뷰창 */
+.prod-selling-point {
+    padding-bottom: 30px;
+}
+.prod-selling-point__title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.prod-selling-point__content {
+    margin-left: 16px;
+    color: #111;
+}
+.prod-atf {
+    display: inline-block;
+    width: 100%;
+}
+#btfTab {
+    margin-top: 50px;
+}
+.tab {
+    position: relative;
+}
+.tab .tab-titles {
+    border-top: 2px solid #555;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    list-style-type: none;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+dl, dt, dd, ul, ol, menu, li {
+    list-style: none;
+}
+.tab .tab-titles>li.active {
+    margin-bottom: -2px;
+    background: #ffffff;
+    border-bottom: 1px solid #fff;
+    color: #111;
+}
+.tab .tab-titles>li {
+    display: inline-block;
+    padding: 15px 20px 14px;
+    width: 25%;
+    border-right: 1px solid #ccc;
+    background-color: #fafafa;
+    text-align: center;
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.tab .tab-contents>li {
+    padding-top: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.product-detail .product-essential-info {
+    margin-bottom: 30px;
+}
+div {
+    display: block;
+}
+.product-detail .product-essential-info .table-title {
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.product-detail .product-essential-info table {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+    margin: 0;
+}
+
+.prod-delivery-return-policy-table {
+    width: 100%;
+    margin-bottom: 40px;
+    table-layout: fixed;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 1em;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body, input, textarea, select, button, table {
+    font-family: '돋움', Dotum, sans-serif;
+    font-size: 100%;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+colgroup {
+    display: table-column-group;
+}
+col {
+    display: table-column;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.prod-delivery-return-policy-table th {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    color: #111;
+    font-weight: 400;
+    font-size: 12px;
+    overflow: hidden;
+}
+caption, th {
+    text-align: left;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+.prod-delivery-return-policy-table td {
+    white-space: normal;
+    word-break: break-all;
+    padding: 12px 16px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    line-height: 17px;
+    font-size: 12px;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}

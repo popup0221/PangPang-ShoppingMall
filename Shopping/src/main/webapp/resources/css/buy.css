@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+.thick{
+   border: 0;
+    height: 3px;
+    background: #333333;
+}
+table.design {
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  line-height: 1.5;
+  border-top: 1px solid #ccc;
+  margin : 20px 10px;
+}
+table.design th.th {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  background: #eee;
+}
+table.design td.td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+p{
+   display: inline;
+}
+div.middle{
+   margin-left: auto;
+   margin-right: auto;
+   margin: 0px auto;
+}
+th{
+   text-align: right;
+}
+td{
+   text-align: left;
+}
+.bundle-info__retail {
+    margin-top: 8px;
+}
+.page-pc .bundle-info__pdd-group-title {
+    margin-top: 20px;
+}
+.bundle-info__pdd-group-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 9px;
+    margin-top: 20px;
+    line-height: 21px;
+}
+.bundle-info__pdd-group-box {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.bundle-info__item-list {
+    overflow: hidden;
+    zoom: 1;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    padding: 0 15px 0 20px;
+}
+.bundle-info__vendor-item-box {
+    border-bottom: 1px solid #f6f6f6;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+.bundle-info__vendor-item-box {
+    position: relative;
+    zoom: 1;
+    overflow: hidden;
+    padding-top: 8px;
+    margin-bottom: 5px;
+    color: #333;
+    border-bottom: 1px solid #f6f6f6;
+}
+.bundle-info__vendor-item {
+    width: 60%!important;
+    padding-right: 40px!important;
+    font-size: 12px!important;
+    color: #555;
+}
+.bundle-info__vendor-item {
+    float: left;
+    width: 70%;
+    color: #333;
+}
+.page-pc .bundle-info__vendor-item>p {
+    font-size: 16px;
+    color: #111;
+}
+.bundle-info__vendor-item__offer-condition {
+    display: inline;
+    color: #203f99;
+    font-weight: 700;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.page-pc .bundle-info__item-description {
+    position: absolute;
+    left: 64%;
+    width: 34%;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+}
+.bundle-info__item-description {
+    clear: both;
+    float: left;
+    padding: 5px 0 10px;
+    width: 70%;
+    font-size: 14px;
+    color: #888;
+}
+#body {
+    width: 1020px;
+    margin: 0 auto 20px;
+}

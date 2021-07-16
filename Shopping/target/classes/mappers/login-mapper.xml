@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mall.spring.project.LoginMapper">
+<!-- namespace : 주로 dao 클래스의 sqlSession과 연결하기 위한 키로 사용 -->
+	<!--  DB 쿼리 작성 -->
+	<!-- id : doa 클래스의 sqlSession의 함수와 연결하기 위해 사용 -->
+	
+	<!-- 
+	${컬럼이름} : mybatis-config.xml의 property의 name과 매칭. DB 테이블의 열
+	#{컬럼이름} : dao 클래스의 sqlSession에서 전송받은 데이터(입력받은 데이터)
+	 -->
+	 
+	 <!-- 
+	 mapper 태그
+	 <insert>, <select>, <update>, <delete>
+	 sqlSession의 함수(insert, selectOne, selectList, update, delete)에 
+	 맞게 수행되는 태그
+	  -->
+	 
+	 <!-- 회원가입 쿼리 - id, pw, name, phone 정보를 customer 테이블에 insert한다. -->
+	 <insert id="insert">
+	 	INSERT INTO ${customer}
+		(${customerId}, ${customerPw}, 
+		${customerName}, ${customerPhone})
+		VALUES 
+		(#{customerId}, #{customerPw}, 
+		#{customerName}, #{customerPhone})
+	 </insert>
+
+	 <insert id="insert_address">
+	 	INSERT INTO ${address}
+		(${customerId}, ${addressNo}, ${addressName}, ${addressDestination}, 
+		${addressDetail}, ${addressPhone}, ${addressRequest})
+		VALUES 
+		(#{customerId}, address_seq.nextval, #{addressName}, #{addressDestination}, 
+		#{addressDetail}, #{addressPhone}, #{addressRequest})
+	 </insert>
+	 
+	 <select id="select" resultType="CustomerVO">
+	 	select * from ${customer}
+		where ${customerId} = #{customerId}
+	 </select>
+	 
+	 <select id="select_check" resultType="Integer">
+	 	select count(*) from ${customer}
+		where ${customerId} = #{customerId}
+		and ${customerPw} = #{customerPw}
+	 </select>
+	 
+	 <select id="select_check_id" resultType="Integer">
+	 	select count(*) from ${customer} 
+	 	where ${customerId} = #{customerId}
+	 </select>
+	 
+	 <select id="select_check_phone" resultType="Integer">
+	 	select count(*) from ${customer} 
+	 	where ${customerPhone} = #{customerPhone, jdbcType=VARCHAR}
+	 </select>
+
+	 <select id="select_check_pw" resultType="Integer">
+	 	select count(*) from ${customer} 
+	 	where ${customerId} = #{customerId} and ${customerPw} = #{customerPw}
+	 </select>
+
+	 <select id="select_check_name_id" resultType="Integer">
+	 	select count(*) from ${customer} 
+	 	where ${customerName} = #{customerName} and ${customerId} = #{customerId}
+	 </select>
+
+	 <select id="select_find_id" resultType="String">
+		select NVL(${customerId}, 'null') from ${customer} 
+		where ${customerName} = #{customerName} and ${customerPhone} = #{customerPhone}
+	 </select>
+	 
+	 <!-- 비밀번호 변경 -->
+	<update id="updatePw">
+		update ${customer} set ${customerPw} = #{customerPw} where ${customerId} = #{customerId}
+	</update>
+
+	<update id="updatePw2">
+		update ${customer} set ${customerPw} = #{updatePw} where ${customerId} = #{customerId}
+	</update>
+	
+	<update id="updateName">
+		update ${customer} set ${customerName} = #{updateName} where ${customerId} = #{customerId}
+	</update>
+
+	<update id="updatePhone">
+		update ${customer} set ${customerPhone} = #{updatePhone} where ${customerId} = #{customerId}
+	</update>
+	
+	<delete id="delete">
+		delete from ${customer} where ${customerId} = #{customerId}  
+	</delete>
+	
+	<select id="selectList" resultType="addressVO">
+		select * from ${address} where ${customerId} = #{customerId}
+	</select>
+	
+	<update id="updateAddress">
+	 	update ${address}
+		set ${addressName} = #{addressName}, ${addressDestination} = #{addressDestination}
+		, ${addressDetail} = #{addressDetail}, ${addressPhone} = #{addressPhone}
+		, ${addressRequest} = #{addressRequest}
+		where ${addressNo} = #{addressNo}
+	 </update>
+	 
+	 <delete id="deleteAddress">
+	 	delete from ${address} where ${addressNo} = #{addressNo}
+	 </delete>
+</mapper>

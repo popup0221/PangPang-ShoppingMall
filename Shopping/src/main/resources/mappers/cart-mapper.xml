@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mall.spring.project.cartMapper">
+	<select id="select_cart_check" resultType="CartVO">
+		select * from ${cart} 
+		where ${customerId} = #{customerId}
+		and ${cartName} = #{cartName}
+	</select>
+	
+	<insert id="insert_and_select_seq" useGeneratedKeys="true" keyColumn="cart_no" keyProperty="cartNo">
+		insert into ${cart}
+		(${customerId}, ${cartImage}, ${cartName}, ${cartPrice}, ${cartAmount}, ${cartTotalprice}, ${productNo}, ${category})
+		values (#{customerId}, #{cartImage}, #{cartName}, #{cartPrice}, #{cartAmount}, #{cartTotalprice}, #{productNo}, #{category})
+		
+<!-- 		<selectKey keyProperty="cartNo" resultType="int" order="AFTER"> -->
+<!--            select cartNo from cart -->
+<!--     	</selectKey> -->
+	</insert>
+	
+	<insert id="insert_cart" >
+		insert into ${cart}
+		(${customerId}, ${cartImage}, ${cartName}, ${cartPrice}, ${cartAmount}, ${cartTotalprice}, ${productNo}, ${category})
+		values (#{customerId}, #{cartImage}, #{cartName}, #{cartPrice}, #{cartAmount}, #{cartTotalprice}, #{productNo}, #{category})
+	</insert>
+	
+	<update id="update_cart">
+		update ${cart} set
+		${cartAmount} = #{cartAmount}, ${cartTotalprice} = #{cartTotalprice} 
+		where ${cartName} = #{cartName}
+		and ${customerId} = #{customerId}
+	</update>
+
+	<select id="select_cart" resultType="CartVO">
+		select * from ${cart} 
+		where ${customerId} = #{customerId}
+		order by ${cartPrice} asc
+	</select>
+	
+	<sql id="delete_by_customerId">
+		delete from ${cart} 
+		where ${customerId} = #{customerId}
+	</sql>
+	
+	<delete id="delete_cart_all">
+		<include refid="delete_by_customerId"/> 
+	</delete>
+	
+	<delete id="delete_one">
+		<include refid="delete_by_customerId"/>
+		and ${cartName} = #{cartName}
+	</delete>
+	
+	<delete id="delete_cart_by_Pno">
+		<include refid="delete_by_customerId"/>
+		and ${productNo} = #{productNo}
+	</delete>
+	
+	<select id="select_cart_no" resultType="CartVO">
+		    select * from ${cart}
+		    where ${cartNo} = #{cartNo}
+	</select>
+</mapper>
