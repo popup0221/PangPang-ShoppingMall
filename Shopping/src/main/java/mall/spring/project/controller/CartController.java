@@ -58,7 +58,7 @@ public class CartController {
 			logger.info("로그인 됌");
 		}
 
-		List<CartVO> list = (List<CartVO>) cartService.read_cart(customerId);
+		List<CartVO> list = cartService.read_cart(customerId);
 		logger.info("list : " + list);
 		model.addAttribute("list", list);
 	}
@@ -83,14 +83,17 @@ public class CartController {
 		vo.setCustomerId(customerId);
 
 		String cartName = vo.getCartName();
+		// overlap(중복확인 한 vo) 
 		CartVO overlap = cartService.read_cart_check(customerId, cartName);
 		
 		logger.info("judge : " + judge);
 		
+		// judge는 구매버튼을 통해 추가되는 것인지? 장바구니 버튼을 통해 추가되는 것 인지 판별해준다.
+		// judge(buy) -> 구매버튼 / judge(cart) -> 장바구니 버튼
 		if (overlap == null) {
 			logger.info("중복 X -> insert");
-			
-			if(judge.equals("buy")) {
+			// 중복값 없을 시 insert
+			if(judge.equals("buy")) { 
 				logger.info("Go buy : " + vo.toString());
 				cartService.create_and_select_seq(vo);
 				logger.info("return : " + vo.getCartNo());

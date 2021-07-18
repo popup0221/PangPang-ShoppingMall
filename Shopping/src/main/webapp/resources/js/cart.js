@@ -11,6 +11,11 @@
 		$('.arrive-date-day').html(delweek); // (요일)
 		$('.arrive-date-date').html(deldate); // 날짜
 		
+		// 페이지 새로고침 
+		function refresh(){
+			location.reload();
+		}
+		
 		function priceSet() {
 			// 리스트 총가격 설정
 			var totalPrice = 0;
@@ -125,12 +130,12 @@
 						'totalPrice' : totalPrice		
 				}
 				
-//				$.ajax({
-//					type : 'post',
-//					url : 'cart_update',
-//					data : obj
-//				}); // end ajax
-//				location.reload(true);
+				$.ajax({
+					type : 'post',
+					url : 'cart_update',
+					data : obj
+				}); // end ajax
+				refresh();
          	}); // end select         	
        }); // end quantity-select
        
@@ -167,7 +172,7 @@
 				url : 'cart_delete',
 				data : obj
 			}); // end ajax
-			location.reload(true);
+			refresh();
        	 }); // end delete_tag    
        }); // end delete-option 
        
@@ -183,7 +188,7 @@
 					'customerId' : customerId
 				}
 			}); // end ajax
-			location.reload(true);
+			refresh();
       }); //  selected-delete
       
       // 구매 버튼 클릭 이벤트
