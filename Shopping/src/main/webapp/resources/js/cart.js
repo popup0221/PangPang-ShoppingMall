@@ -11,9 +11,9 @@
 		$('.arrive-date-day').html(delweek); // (요일)
 		$('.arrive-date-date').html(deldate); // 날짜
 		
-		// 페이지 새로고침 
+		// 페이지 새로고침 함수
 		function refresh(){
-			location.reload();
+			location.reload(); 
 		}
 		
 		function priceSet() {
